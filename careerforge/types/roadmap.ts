@@ -16,6 +16,8 @@ export interface RoadmapNode {
   status: "completed" | "in-progress" | "planned";
   track: "frontend" | "backend" | "mobile" | "fullstack";
   depth: number;
+  tier?: number;
+  estHours?: number;
   parentIds: string[];
   children: string[];
   concepts: Concept[];

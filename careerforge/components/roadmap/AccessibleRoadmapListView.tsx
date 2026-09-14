@@ -103,7 +103,7 @@ export function AccessibleRoadmapListView({
                       {node.concepts && node.concepts.length > 0 && (
                         <p className="text-xs text-neutral-400">
                           {node.concepts.length} key sub-concepts:{" "}
-                          {node.concepts.map((c) => c.title).slice(0, 3).join(", ")}
+                          {node.concepts.map((c) => c.label || (c as any).title).slice(0, 3).join(", ")}
                           {node.concepts.length > 3 ? "..." : ""}
                         </p>
                       )}
